@@ -1,129 +1,95 @@
-# KMP-DSA
-finding motif using visualization
-🔍 KMP Algorithm Visualization using Python
+# KMP Algorithm Visualizer
 
-A GUI-based visualization of the Knuth–Morris–Pratt (KMP) string matching algorithm, implemented in Python using Tkinter and Matplotlib, with explicit use of Stack, Queue, and Linked List data structures.
+A Python-based graphical tool designed to demonstrate the **Knuth–Morris–Pratt (KMP)** string-matching algorithm. This project visualizes character-by-character comparisons and the efficiency of the Longest Prefix Suffix (LPS) array in real-time.
 
-This project helps students understand how KMP works internally by showing character-by-character comparisons and match detection visually.
+## 📌 Project Overview
 
-📌 Features
+The KMP algorithm optimizes string searching by avoiding redundant comparisons. This visualizer provides an intuitive look at how the algorithm "skips" through the text based on pre-processed pattern data.
 
-✅ Implementation of KMP string matching algorithm
+### Key Features
 
-🎨 Graphical visualization of text and pattern matching
+* **Real-Time Animation:** Visualizes the sliding window approach and character matches using Matplotlib.
+* **Dynamic Input:** Support for user-defined text sequences and search motifs.
+* **Efficiency:** Demonstrates  time complexity in action.
+* **Academic Implementation:** Incorporates fundamental data structures (Stacks, Queues, and Linked Lists) to manage state and match results.
 
-🧱 Explicit use of:
+## 🧠 Algorithm & Complexity
 
-Stack – during LPS (Longest Prefix Suffix) construction
+The core of this tool is the Knuth–Morris–Pratt logic, which utilizes an auxiliary **LPS (Longest Prefix Suffix)** array to determine the next shift.
 
-Queue – to store all pattern match positions
+| Metric | Complexity |
+| --- | --- |
+| **Time Complexity** |  |
+| **Space Complexity** |  |
+| **Visualization Delay** | 700ms (Step-by-step) |
 
-Linked List – to maintain ordered match results
+---
 
-⏱️ Step-by-step animation using Tkinter.after()
+## 🛠️ Technologies Used
 
-📍 Highlights:
+* **Python:** Core Logic
+* **Tkinter:** GUI for user input and error handling
+* **Matplotlib:** Dynamic plotting and visualization
 
-Current comparison index
+---
 
-Successful pattern matches
+## 🚀 Getting Started
 
-🧪 User-defined Text and Pattern input
+### Prerequisites
 
-🧠 Algorithm Used
+Ensure you have Python installed. You will need the `matplotlib` library:
 
-Knuth–Morris–Pratt (KMP) Algorithm
-
-Time Complexity:
-
-O(n + m)
-
-where n = length of text, m = length of pattern
-
-Space Complexity:
-
-O(m) for LPS array
-
-The KMP algorithm avoids redundant comparisons by using the LPS array, making it more efficient than naive string matching.
-
-🛠️ Technologies Used
-Technology	Purpose
-Python	Core programming language
-Tkinter	GUI interface
-Matplotlib	Visualization
-VS Code	Development environment
-📂 Project Structure
-KMP-Visualization/
-│
-├── kmp_visualizer.py     # Main application file
-├── README.md             # Project documentation
-└── requirements.txt      # Dependencies
-
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
-cd KMP-Visualization
-
-2️⃣ Install Dependencies
+```bash
 pip install matplotlib
 
+```
 
-⚠️ Tkinter comes pre-installed with Python.
+### Installation & Execution
 
-3️⃣ Run the Application
-python kmp_visualizer.py
+1. Clone this repository:
+```bash
+git clone https://github.com/your-username/KMP-Visualization.git
 
-🖥️ How the Visualization Works
-
-🔵 Blue bars → Characters of the input text
-
-🟠 Orange bar → Current character comparison
-
-🟢 Green bars → Successful pattern match
-
-The animation updates every 600 ms, allowing clear observation of each comparison.
-
-🧪 Example
-
-Text:
-
-ABABDABACDABABCABAB
+```
 
 
-Pattern:
+2. Navigate to the directory:
+```bash
+cd KMP-Visualization
 
-ABABCABAB
+```
 
 
-Output:
+3. Run the application:
+```bash
+python kmp.py
 
-Pattern found at position: 10
+```
 
-📚 Educational Value
 
-This project is ideal for:
 
-Data Structures & Algorithms labs
+---
 
-Algorithm visualization assignments
+## 🖥️ How It Works
 
-Understanding pattern matching algorithms
+1. **Input:** Enter the main **Text** and the **Pattern** you wish to find in the GUI.
+2. **Preprocessing:** The program calculates the LPS array for the pattern.
+3. **Visualization:** * **Text (Black):** The target sequence.
+* **Pattern (Blue):** The sliding motif being compared.
+* **Status (Green):** Displays the exact position when a match is successfully identified.
 
-Viva and technical presentations
 
-Mini-project submission
 
-🚀 Future Enhancements
+---
 
-🔄 LPS array visualization
+## 📚 Educational Context
 
-🎚️ Speed control slider
+This project was developed for **Data Structures & Algorithms (DSA)** study, focusing on:
 
-📊 Comparison counter
+* Pattern matching optimization.
+* Practical application of auxiliary arrays.
+* GUI development for algorithm demonstration.
 
-💾 Export visualization as video
+**Submitted by:** Prapti Poudel & Nayana Shakya
 
-🌐 Web-based version
 
-Submitted by:
-Prapti Poudel 
-Nayana Shakya
